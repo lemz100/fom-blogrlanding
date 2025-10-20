@@ -4,7 +4,6 @@ import Dropdown from './assets/components/Dropdown/Dropdown';
 import Footer from './assets/components/Footer/Footer'
 import Button from './assets/components/ButtonDual/Button';
 import { useState } from 'react';
-import bgCircles from './assets/images/bg-pattern-circles.svg';
 import illus1_mob from './assets/images/illustration-editor-mobile.svg';
 import illus1_desk from './assets/images/illustration-editor-desktop.svg';
 import phones from './assets/images/illustration-phones.svg';
