@@ -1,0 +1,95 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    display: contents;
+}
+.right {
+    display: none;
+}
+.menu {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .nav { 
+        p { 
+            .tp6b();
+        }
+        p:hover, p:active {
+            cursor: pointer;
+        }
+    }
+    .menuIcon {
+        display: none;
+    }
+    .left, .right {
+        display: flex;
+        align-items: center;
+    }
+    .left {
+        gap: 4rem;
+    }
+    .right {
+        gap: 2rem;
+        p {
+            color: white;
+            opacity: 0.75;
+        }
+        p:active {
+            opacity: 1;
+        }
+    }
+    .menu {
+        // Container for features
+        display: flex;
+        gap: 2rem;
+    }
+    .dropCont {
+        // Container for menu item + dropdown
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .dropdown {
+            // Drop down styling
+            top: 1.5rem;
+            border-radius: 5px;
+            height: 150px;
+            padding: 1.5rem;
+            position: absolute;
+            z-index: 999;
+            background-color: white;
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0.5rem;
+            p {
+                color: @purple950;
+                .tp6r();
+            }
+            p:active {
+                .tp6b();
+            }
+        }
+        .dropdown.visible {
+            display: flex;
+        }
+
+    }
+    .ftrDrop {
+        // Feature + arrow icon styling
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        p {
+            color: white;
+        }
+        img {
+            cursor: pointer;
+        }
+    }
+}

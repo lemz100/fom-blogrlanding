@@ -1,0 +1,33 @@
+/** 
+* For buttons that have two different styles but the same core button style.
+* Primary for first button styling
+* Secondary for second button styling
+*/
+.button {
+    border-radius: 28px;
+    padding: 1rem;
+    .tp6b();
+    cursor: pointer;
+    text-align: center;
+    width: 137px;
+    height: 48px;
+}
+.primary {
+    background-color: white;
+    border: none;
+    color: @red500;
+}
+.primary:active {
+    background-color: @red400;
+    color: white;
+}
+.secondary {
+    border: 1px solid white;
+    color: white;
+    background: transparent;
+}
+.secondary:active {
+    background-color: white;
+    border: none;
+    color: @red400;
+}

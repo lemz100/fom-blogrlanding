@@ -1,0 +1,1 @@
+This component has functionality for dropdown of its items.

@@ -1,0 +1,114 @@
+// Base styles for Dropdown component
+
+.dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 4.3rem;
+    height: fit-content;
+    z-index: 999;
+    // Adjustable properties below:
+    background-color: white; // Can change to whatever color is desired
+    padding: 2rem 1.5rem;
+    width: 100%;
+}
+.dropdown.visible {
+    display: flex;
+}
+.dropdown .contents {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; // Can be adjusted - the gap between each item of the dropdown contents
+    .ftrDrop {
+        align-self: center;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        p {
+            .tp6b();
+            color: @blue900;
+        }
+    }
+    .dropCont {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-self: stretch;
+        .itemDropdown {
+            height: 150px;
+            display: none;
+            border-radius: 5px;
+            background-color: @gray100;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            span {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+                p {
+                    .tp6r();
+                    color: @blue900;
+                }
+            }
+        }
+        .itemDropdown.visible {
+            display: flex;
+        }
+    }
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: @gray100;
+}
+
+.authSection {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    p {
+        .tp6b();
+        color: @blue900;
+        cursor: pointer;
+    }
+    p:active, button:active {
+        opacity: 0.75;
+    }
+    button {
+        border-radius: 28px;
+        background: @grad2;
+        color: white;
+        border: none;
+        padding: 1rem;
+        .tp6b();
+        cursor: pointer;
+        text-align: center;
+        width: 137px;
+        height: 48px;
+    }
+}
+
+@media screen and (min-width: 512px) {
+    .authSection {
+        flex-direction: row;
+        gap: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .dropdown, .dropdown.visible {
+        // Can be adjusted if the desktop has a dropdown.
+        display: none; 
+    }
+}
